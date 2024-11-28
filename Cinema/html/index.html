@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinémas proches</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>Cinémas proches de chez vous</h1>
+
+    <form id="cinema-form">
+        <button type="button" id="geolocate-btn">Me géolocaliser</button>
+
+        <label for="address-search">Chercher des cinémas proches d'une adresse :</label>
+        <input type="search" id="address-search" placeholder="L'adresse recherchée">
+
+        <label for="distance-range">Distance en km</label>
+        <input type="range" id="distance-range" value="10" min="1" max="100">
+
+        <button type="submit">Rechercher</button>
+    </form>
+
+    <ul id="cinema-list"></ul>
+
+    <div id="map" style="height: 400px;"></div>
+
+    <script src="../js/geolocation.js"></script>
+    <script src="../js/addressApi.js"></script>
+    <script src="../js/cinemaApi.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
